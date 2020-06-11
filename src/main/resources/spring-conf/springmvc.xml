@@ -13,4 +13,8 @@
         <property name="prefix" value="/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <!--  解决静态资源拦截问题  -->
+    <mvc:default-servlet-handler/>
+    <!--  解决文件上传  -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 </beans>
